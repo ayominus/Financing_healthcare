@@ -77,10 +77,16 @@ and year =2019;
 
 -- LIFE EXPECTANCY
 -- life expectancy in countries over 10 years
+-- National
 select Country,
  floor((2019_f+2015_f+2010_f)/3)as avg_female_life_exp,
  floor((2019_m+2015_m+2010_m)/3) as avg_male_life_exp
 from country_life_expectancy;
+-- Regional
+select Regions,
+ floor((2019_f+2015_f+2010_f)/3)as avg_female_life_exp,
+ floor((2019_m+2015_m+2010_m)/3) as avg_male_life_exp
+from regional_life_expectancy;
 
 -- NATIONAL LIFE EXPECTANCIES VS HEALTHCARE EXPENDITURE
 -- 2010
